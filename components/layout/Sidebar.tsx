@@ -1,5 +1,7 @@
 import { BsHouseFill, BsBellFill } from 'react-icons/bs';
+import { BiLogOut } from 'react-icons/bi';
 import { FaUser } from 'react-icons/fa';
+import SidebarItem from './SidebarItem';
 import SidebarLogo from './SidebarLogo';
 
 const Sidebar = () => {
@@ -28,7 +30,15 @@ const Sidebar = () => {
       <div className="flex flex-col items-end">
         <div className="space-y-2 lg:w-[230px]">
           <SidebarLogo />
-          <div>Sidebar</div>;
+          {items.map((item) => (
+              <SidebarItem
+                key={item.href}
+                href={item.href} 
+                icon={item.icon} 
+                label={item.label}
+              />
+            ))}
+            <SidebarItem onClick={() => {}} icon={BiLogOut} label="Logout" />
         </div>
       </div>
     </div>
