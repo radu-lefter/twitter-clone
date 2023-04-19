@@ -56,7 +56,7 @@ console.log(error)
     <div className="text-neutral-400 text-center mt-4">
       <p>First time using Twitter?
         <span 
-          onClick={()=>{}} 
+          onClick={onToggle} 
           className="
             text-white 
             cursor-pointer 
