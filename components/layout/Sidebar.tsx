@@ -40,6 +40,7 @@ const Sidebar = () => {
                 href={item.href} 
                 icon={item.icon} 
                 label={item.label}
+                auth={item.auth}
               />
             ))}
             {currentUser && <SidebarItem onClick={() => signOut()} icon={BiLogOut} label="Logout" />}
